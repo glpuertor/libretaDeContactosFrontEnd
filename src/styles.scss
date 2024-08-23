@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+
+// variable scss
+//@import "assets/SCSS/variables";
+
+// mixin scss
+//@import "assets/SCSS/mixins";
+//@import "assets/SCSS/extends";
+// default scss
+//@import "assets/SCSS/common";
+
+// button scss
+//@import "assets/SCSS/button";
+
+//@import "assets/SCSS/blog";
+//@import "assets/SCSS/single_blog";
+// body scss
+//@import "assets/SCSS/menu";
+//@import "assets/SCSS/banner";
+//@import "assets/SCSS/client_logo";
+//@import "assets/SCSS/live_stareams";
+//@import "assets/SCSS/Latest_War";
+//@import "assets/SCSS/gallery_part";
+//@import "assets/SCSS/upcomming_war";
+
+
+
+
+//@import "assets/SCSS/feature_part";
+//@import "assets/SCSS/about_us";
+//@import "assets/SCSS/use_sasu";
+//@import "assets/SCSS/pricing_plan";
+//@import "assets/SCSS/cta_part";
+//@import "assets/SCSS/footer";
+//@import "assets/SCSS/elements";
+//@import "assets/SCSS/blog_part";
+//@import "assets/SCSS/contact";
+//@import "assets/SCSS/team";
+// breadcrumb scss
+//@import "assets/SCSS/breadcrumb";
+
+
+
+
+#iconHome{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: solid 2px #1e759e;
+  text-align: center;
+  img{
+    width: 200px !important;
+    height: 100px !important;
+    margin-top: 50px;
+  }
+}

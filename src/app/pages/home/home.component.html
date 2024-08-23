@@ -1,0 +1,85 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2>Libreta de contactos Lista de contactos</h2>
+      <div class="row">
+        <div (click)="provider()" class="btn btn-primary">
+          Añadir nuevo contacto +
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row d-flex justify-content-center">
+    <div class="col-12 d-flex justify-content-center">
+      <table>
+        <thead>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Description</th>
+          <th>email</th>
+
+          <th>phone</th>
+          <th>details</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of contactos.contactos">
+            <td>{{ item.status }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.description }}</td>
+            <td>{{ item.email }}</td>
+            <td>{{ item.phone }}</td>
+            <td>
+              <a (click)="provider(item.id)"
+                ><div
+                  routerLinkActive="router-link-active"
+                  class="btn btn-success"
+                >
+                  <i class="fa-solid fa-pen-to-square"></i></div
+              ></a>
+              <a (click)="open(content, item.id, item.name)"
+                ><div class="btn btn-danger">
+                  <i class="fa-solid fa-delete-left"></i></div
+              ></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <ng-template #content let-c="close" let-d="dismiss">
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Do you want delete?</h4>
+        <button
+          type="button"
+          class="btn-close"
+          aria-label="Close"
+          (click)="d('Cross click')"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure? do you want delete the provider: {{ modalName }}</p>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-warning"
+          (click)="c(); destroyProvider(modalId)"
+        >
+          Delete
+        </button>
+      </div>
+    </ng-template>
+
+    <!--
+      <div class="row">
+        <div class="col-12">
+          <p>Default pagination:</p>
+          <ngb-pagination [collectionSize]="70" [(page)]="page" aria-label="Default pagination" />
+          <hr />
+          <pre>Current page: {{ page }}</pre>
+        </div>
+
+      </div>
+      -->
+  </div>
+</div>
